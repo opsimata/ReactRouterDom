@@ -4,7 +4,7 @@ import Finder from "./Finder";
 import { useState } from "react";
 import Filters from "./Filters";
 import Sorter from "./Sorter";
-import Itens from "./Itens";
+import Items from "./Items";
 
 export default function Menu() {
   const [find, setFinder] = useState("");
@@ -26,7 +26,7 @@ export default function Menu() {
           <Filters filter={filter} setFilter={setFilter} />
           <Sorter sorter={sorter} setSorter={setSorter} />
         </div>
-        <Itens find={find} filter={filter} sorter={sorter}/>
+        <Items find={find} filter={filter} sorter={sorter}/>
       </section>
     </main>
   );

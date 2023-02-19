@@ -1,5 +1,5 @@
 @import "/src/styles/breakpoints";
-@import "/src/styles/variaveis";
+@import "/src/styles/variables";
 
 .menu {
   padding: 20px $padding-horizontal;
@@ -16,7 +16,7 @@
 
 .header {
   align-items: center;
-  background-image: url("/assets/menu/header.png");
+  background-image: url("/assets/img/menu/header.png");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
