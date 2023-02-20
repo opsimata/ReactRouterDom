@@ -8,8 +8,11 @@ import Start from "pages/Start/";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
+const currentComponent = window.location.pathname === "/" ? <Start /> : <Menu />;
+
 root.render(
 	<React.StrictMode>
-		<Start/>
+		{currentComponent}
 	</React.StrictMode>
 );
