@@ -6,7 +6,7 @@ export default function Start() {
 	recommendedDishes = recommendedDishes.sort(() => 0.5 - Math.random()).splice(0,3);
 	return (
 		<section>
-			<h3 className={styles.title}>Recomendações da cozinha</h3>
+			<h3 className={styles.title}>Recomendações do dia</h3>
 			<div className={styles.recommended}>
 				{recommendedDishes.map( item => (
 					<div className={styles.recommended} key={item.id}>
