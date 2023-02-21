@@ -1,0 +1,17 @@
+@import "/src/styles/variables";
+@import "/src/styles/breakpoints";
+
+.navbar {
+    padding: 20px $padding-horizontal;
+
+    @media (max-width: $desktop_xsm) {
+        padding: 20px $padding-horizontal-mobile;
+    }
+
+    @media (min-width: $desktop_sm) {
+        padding: 20px $padding-horizontal-sm;
+    }
+    @media (min-width: $desktop_sm) and (mas-width: $desktop_md) { 
+        padding: 20px $padding-horizontal-md;
+    }
+}
