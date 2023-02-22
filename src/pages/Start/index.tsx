@@ -7,7 +7,6 @@ export default function Start() {
 	recommendedDishes = recommendedDishes.sort(() => 0.5 - Math.random()).splice(0,3);
 	return (
 		<section>
-			<Navbar/>
 			<h3 className={styles.title}>Recomendações do dia</h3>
 			<div className={styles.recommended}>
 				{recommendedDishes.map( item => (

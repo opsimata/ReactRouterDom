@@ -2,6 +2,8 @@
 @import "/src/styles/breakpoints";
 
 .navbar {
+
+    display: flex;
     padding: 20px $padding-horizontal;
 
     @media (max-width: $desktop_xsm) {
@@ -14,4 +16,24 @@
     @media (min-width: $desktop_sm) and (mas-width: $desktop_md) { 
         padding: 20px $padding-horizontal-md;
     }
+
+    &__list {
+        align-items: center;
+        display: flex;
+      }
+      &__link {
+        list-style-type: none;
+        padding: 0 20px;
+        a {
+          color: $dark;
+          cursor: pointer;
+          font-size: 24px;
+          font-weight: 600;
+          text-decoration: none;
+          transition: .2s ease;
+          &:hover {
+            color: $dark-grey;
+          }
+        }
+      }
 }
