@@ -1,5 +1,6 @@
 import { ReactComponent as Logo } from "assets/img/logo.svg";
 import styles from "./Navbar.module.scss";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
 	const directions = [{
@@ -19,9 +20,9 @@ export default function Navbar() {
 			<ul className={styles.navbar__list}>
 				{directions.map((direction, index) => (
 					<li key={index} className={styles.navbar__link}>
-						<a href={direction.to}>
+						<Link to={direction.to}>
 							{direction.label}
-						</a>
+						</Link>
 					</li>
 				))}
 			</ul>
