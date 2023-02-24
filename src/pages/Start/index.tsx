@@ -3,6 +3,7 @@ import styles from "./Start.module.scss";
 import stylesTheme from "../../styles/Theme.module.scss";
 import nossaCasa from "assets/img/nossa_casa.png";
 import { useNavigate } from "react-router-dom";
+import { Dish } from "types/Dish";
 
 export default function Start() {
 
@@ -12,7 +13,7 @@ export default function Start() {
 
 	recommendedDishes = recommendedDishes.sort(() => 0.5 - Math.random()).splice(0,3);
 
-	function RedirectSeeMore(dish: typeof menu[0]) {
+	function RedirectSeeMore(dish: Dish) {
 		navigate(`/dish/${dish.id}`, {state: { dish }, replace: true});
 	}
 
