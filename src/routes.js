@@ -14,7 +14,6 @@ export default function AppRouter() {
 						<Route index element={<Start />} />
 						<Route path="menu" element={<Menu />} />
 					</Route>
-
 				</Routes>
 			</Router>
 		</main>

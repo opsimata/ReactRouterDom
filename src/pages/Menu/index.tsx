@@ -4,6 +4,7 @@ import { useState } from "react";
 import Filters from "./Filters";
 import Sorter from "./Sorter";
 import Items from "./Items";
+import stylesTheme from "../../styles/Theme.module.scss";
 
 export default function Menu() {
 	const [find, setFinder] = useState("");
@@ -12,7 +13,7 @@ export default function Menu() {
 
 	return (
 		<section className={styles.carte}>
-			<h3 className={styles.carte__title}>Cardápio</h3>
+			<h3 className={stylesTheme.title}>Cardápio</h3>
 			<Finder find={find} setFinder={setFinder} />
 			<div className={styles.carte__filters}>
 				<Filters filter={filter} setFilter={setFilter} />
