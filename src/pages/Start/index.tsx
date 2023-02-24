@@ -2,12 +2,19 @@ import menu from "data/menu.json";
 import styles from "./Start.module.scss";
 import stylesTheme from "../../styles/Theme.module.scss";
 import nossaCasa from "assets/img/nossa_casa.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Start() {
 
 	let recommendedDishes = [...menu];
 
+	const navigate = useNavigate();
+
 	recommendedDishes = recommendedDishes.sort(() => 0.5 - Math.random()).splice(0,3);
+
+	function RedirectSeeMore(dish: typeof menu[0]) {
+		navigate(`/dish/${dish.id}`, {state: { ...dish }, replace: true});
+	}
 
 	return (
 		<section>
@@ -22,7 +29,10 @@ export default function Start() {
 						<div className={styles.recommended__image}>
 							<img src={item.photo} alt={item.title}/>
 						</div>
-						<button className={styles.recommended__button}>
+						<button
+							className={styles.recommended__button}
+							onClick={() => RedirectSeeMore(item)}
+						>
 							Ver mais
 						</button>
 					</div>
