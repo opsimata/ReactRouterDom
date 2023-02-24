@@ -2,6 +2,7 @@ import styles from "./Dish.module.scss";
 import { useParams, useNavigate } from "react-router-dom";
 import menu from "data/menu.json";
 import DishTags from "components/DishTags";
+import NotFound from "pages/NotFound";
 
 export default function Dish() {
 
@@ -10,7 +11,7 @@ export default function Dish() {
 	const navigate = useNavigate();
 
 	if (!dish) {
-		return "Prato não encontrado";
+		return <NotFound />;
 	}
 
 	return(
