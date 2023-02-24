@@ -13,7 +13,7 @@ export default function Start() {
 	recommendedDishes = recommendedDishes.sort(() => 0.5 - Math.random()).splice(0,3);
 
 	function RedirectSeeMore(dish: typeof menu[0]) {
-		navigate(`/dish/${dish.id}`, {state: { ...dish }, replace: true});
+		navigate(`/dish/${dish.id}`, {state: { dish }, replace: true});
 	}
 
 	return (
